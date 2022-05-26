@@ -85,6 +85,7 @@ char **crearProcBg(char **vector_cadenas)
     char **listaBg = vector_cadenas;
 
     vector_cadenas[2] = NULL;
+    puts("Proceso en background");
 
     return listaBg;
 }
