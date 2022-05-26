@@ -88,9 +88,9 @@ int main(int argc, char *argv[])
 
                     if (vector_cadenas[1] != NULL)
                     {
+                        printf("El proceso ha sido matado brutalmente...\n");
                         char *const kill[] = {"kill", vector_cadenas[1], NULL};
                         execvp(kill[0], kill);
-                        printf("El proceso ha sido matado brutalmente...\n");
                     }
                     else
                     {
