@@ -76,11 +76,8 @@ bool tieneAmper(char **vector_cadenas)
     return llego;
 }
 
-char **crearProcBg(char **vector_cadenas)
+char **vectorSinAmper(char **vector_cadenas)
 {
-
-    int size = strlen(*vector_cadenas);
-    int size1 = size - 1;
 
     char **listaBg = vector_cadenas;
 

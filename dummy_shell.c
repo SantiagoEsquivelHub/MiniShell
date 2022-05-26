@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         if (strcmp("salir", vector_cadenas[0]) == 0)
         {
 
-            printf("Gracias por usar mi dummy shell ;-)\n");
+            printf("Gracias por usar mi dummy shell ;-) \n ");
             sleep(3);
             char *const args[] = {"clear", NULL};
             execvp(args[0], args);
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         if (strcmp("tareas", vector_cadenas[0]) == 0)
         {
 
-            printf("---------------------------------- \n");
+            printf("---------------------------------- \n ");
             printf("Procesos en segundo plano \n");
 
             for (int i = 0; i < posicionVector; i++)
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
             posicionVector++;
 
-            printf("---------------------------------- \n");
+            printf("---------------------------------- \n ");
         }
 
         pid = fork();
@@ -57,13 +57,12 @@ int main(int argc, char *argv[])
             if (tieneAmper(vector_cadenas))
             {
 
-                listaBg = crearProcBg(vector_cadenas);
+                listaBg = vectorSinAmper(vector_cadenas);
 
                 procesos[1] = "hola";
                 procesos[2] = "santi";
 
                 pidBG = fork();
-
                 if (pidBG == 0)
                 {
 
@@ -88,13 +87,13 @@ int main(int argc, char *argv[])
 
                     if (vector_cadenas[1] != NULL)
                     {
-                        printf("El proceso ha sido matado brutalmente...\n");
+                        printf("El proceso ha sido matado brutalmente... \n ");
                         char *const kill[] = {"kill", vector_cadenas[1], NULL};
                         execvp(kill[0], kill);
                     }
                     else
                     {
-                        printf("Rectifica el pid del proceso a detener, con el comando 'ps' puedes saber los pids de todos los procesos actuales \n");
+                        printf("Rectifica el pid del proceso a detener, con el comando ps puedes saber los pids de todos los procesos actuales \n ");
                     }
                 }
             }
